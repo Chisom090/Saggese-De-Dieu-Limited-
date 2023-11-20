@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saggese De Dieu Limited Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- Update the image path to a relative path -->
+            <img src="static/img/Sagesse_logo_icon-120x118.png" alt="Sagesse Logo" class="logo">
+            <h1>Welcome to Saggese De Dieu Limited Management System</h1>
+            <p class="motto">Your premier Luxury Carpentry and Woodwork Solution</p>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="registration-form">
+            <h2 class="page-title">Register</h2>
+            <form method="post" action="{{ url_for('register') }}">
+                <label for="reg-username">Username:</label>
+                <input type="text" id="reg-username" name="username" required>
+
+                <label for="reg-password">Password:</label>
+                <input type="password" id="reg-password" name="password" required>
+
+                <label for="reg-role">Role:</label>
+                <select id="reg-role" name="role" required>
+                    <option value="HR">HR</option>
+                    <option value="Consultant">Consultant</option>
+                </select>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+        <!-- End of Registration Form -->
+
+        <!-- Login Form -->
+        <div class="login-form">
+            <h2 class="page-title">Login</h2>
+            <form method="post" action="{{ url_for('login') }}">
+                <label for="login-username">Username:</label>
+                <input type="text" id="login-username" name="username" required>
+
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <!-- End of Login Form -->
+    </div>
+</body>
+
+</html>
